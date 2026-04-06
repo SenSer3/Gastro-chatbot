@@ -34,15 +34,14 @@ const Navbar = () => {
                         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                         </svg>
                       </div>
-                      <span onClick={handleSubmitHome}  id="site-title" className="text-xl font-semibold bg-linear-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent">MediAssist AI</span>
+                      <span onClick={handleSubmitHome}  id="site-title" className="text-xl font-semibold bg-linear-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent">Gastro Care</span>
                     </div>
                     <div className=' flex gap-2'>
                         <button onClick={handleSubmitHome} className='text-gray-700 hover:bg-teal-100 hover:text-teal-500 px-2 rounded-lg'>Home</button>
                         <button onClick={handleSubmitChat} className='text-gray-700 hover:bg-teal-100 hover:text-teal-500 px-2 rounded-lg'>Chat</button>
-                        <button onClick={handleSubmitSym} className='text-gray-700 hover:bg-teal-100 hover:text-teal-500 px-2 rounded-lg'>Symptoms</button>
-                        <button onClick={handleSubmitMed} className='text-gray-700 hover:bg-teal-100 hover:text-teal-500 px-2 rounded-lg'>Medicine</button>
+                        {/* <button onClick={handleSubmitSym} className='text-gray-700 hover:bg-teal-100 hover:text-teal-500 px-2 rounded-lg'>Symptoms</button>
+                        <button onClick={handleSubmitMed} className='text-gray-700 hover:bg-teal-100 hover:text-teal-500 px-2 rounded-lg'>Medicine</button> */}
                     </div>
-                
             </div>
         </div>
     </>

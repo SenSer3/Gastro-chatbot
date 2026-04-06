@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MedAssist - Gastro Care
 
-## Getting Started
+MedAssist is a modern web application built with Next.js designed for gastrointestinal health assistance. It provides users with symptom checking, medicine information, AI-powered chat support, and secure user authentication.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Symptom Checker** (/symptoms): Input symptoms to get potential diagnoses and recommendations.
+- **Medicine Database** (/medicine): Search and view details on gastrointestinal medications.
+- **AI Chat** (/chat): Interactive chatbot for health queries and advice.
+- **User Dashboard** (/home): Personalized health tracking and history.
+- **Authentication** (/auth/login): Secure Supabase-powered login and user management.
+- **Responsive Design**: Built with TailwindCSS for mobile and desktop.
+
+## Tech Stack
+
+- **Frontend**: Next.js 16 (App Router), React 19, TailwindCSS 4
+- **Backend/Auth**: Supabase (Database, Authentication)
+- **Styling**: TailwindCSS with PostCSS
+
+## Prerequisites
+
+- Node.js 20 or higher
+- [Supabase Account](https://supabase.com) - Create a project to get your URL and anon key.
+
+## Quick Start
+
+1. Clone the repo:
+   ```bash
+   git clone <your-repo>
+   cd med-assist
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create `.env.local` in root and add your Supabase credentials:
+   ```
+   SUPABASE_URL=your_supabase_project_url
+   SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+5. Build for production:
+   ```bash
+   npm run build
+   npm run start
+   ```
+
+## Project Structure
+
+```
+med-assist/
+├── app/
+│   ├── component/     # Reusable components (Navbar, LogIn)
+│   ├── auth/          # Authentication pages
+│   ├── chat/          # Chat interface
+│   ├── home/          # User dashboard
+│   ├── medicine/      # Medicine lookup
+│   ├── symptoms/      # Symptom checker
+│   ├── globals.css    # Tailwind styles
+│   └── layout.js      # Root layout
+├── backend/           # Supabase client
+├── public/            # Static assets
+├── package.json       # Dependencies
+├── next.config.mjs    # Next.js config
+├── tailwind.config.js # Tailwind config (if custom)
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- `npm run dev`: Start dev server
+- `npm run build`: Build production
+- `npm run start`: Production server
+- `npm run lint`: ESLint check
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
+Easiest on [Vercel](https://vercel.com) (creators of Next.js):
 
-To learn more about Next.js, take a look at the following resources:
+1. Push to GitHub.
+2. Import to Vercel.
+3. Add Supabase env vars in Vercel dashboard.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+See [Next.js Deployment Docs](https://nextjs.org/docs/app/building-your-application/deploying).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+Pull requests welcome! For major changes, open an issue first.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
+
